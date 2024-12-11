@@ -53,9 +53,6 @@ body {
   }
   
   button {
-    width: 50%;
-    padding: 6px;
-    margin-left: 73px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -99,21 +96,39 @@ body {
     text-align: left;
   }
 
-  .AddTask-btn {
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-    border: none;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-  }
-
   .table-style {
     width: 100%;
     text-align: left;
     border: 1.5px solid black;
   }
 
+  .register-button {
+    margin-left: 110px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .login-button {
     margin-top: 15px;
+    margin-left: 115px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
+
+  .add-task-button-container,
+  .edit-task-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .AddPage-btn,
+  .EditPage-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+
+
+
+

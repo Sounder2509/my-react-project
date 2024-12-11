@@ -91,7 +91,7 @@ const Register = () => {
 
       alert("Registration Successful!");
 
-      navigate("/login");
+      navigate("/");
 
       setFormData({
         firstName: "",
@@ -181,7 +181,7 @@ const Register = () => {
           {errors.confirmPassword && <small className="text-warning">{errors.confirmPassword}</small>}
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="register-button">
           Register
         </button>
         <p className="register-paragraph"> Already Have an Account? {' '} 

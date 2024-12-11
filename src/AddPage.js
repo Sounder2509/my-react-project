@@ -1,51 +1,44 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './styles.css';
 
-const AddTask = () => {
-  const [taskName, setTaskName] = useState('');
+function AddTask() {
+  const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newTask = { id: Date.now(), name: taskName, description: description };
-    
+  const handleAddTask = () => {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    tasks.push(newTask);
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    const newTask = { id: Date.now(), name, description };
+    const updatedTasks = [...tasks, newTask];
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 
-    navigate('/');
+    navigate('/list-page')
   };
-  
+
   return (
-    <div className="AddTask-container">
-      <h2>Add New Task</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="taskName">Task Name</label>
-        <input
-          type="text"
-          id="taskName"
-          value={taskName}
-          onChange={(e) => setTaskName(e.target.value)}
-          required
-        />
-        <label htmlFor="description">Description</label>
-        <input
-          id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          required
-        ></input>
+    <div>
+      <h2>Add Task</h2>
+      <input
+        type="text"
+        placeholder="Task Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
 
-        <button 
-          onClick={() => navigate("list-page")}
-          type="submit"
-          className="AddTask-btn"
-          >Add Task</button>
+      <div className='add-task-button-container'>
+        <button className ='AddPage-btn' onClick={handleAddTask}> Add Task </button>
+      </div>
 
-      </form>
+
     </div>
   );
-};
+}
 
 export default AddTask;

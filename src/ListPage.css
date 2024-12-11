@@ -1,12 +1,33 @@
 .TaskList-container {
     width: 100%;
-    height: 80vh;
+    height: 100%;
     margin: 20px auto;
     padding: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
+    position:relative;
+  }
+
+  .TaskList-container .AddTask-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: auto;
+  }
+
+  button.AddTask-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+    width: auto;
   }
   
   .TaskList-title {
@@ -29,11 +50,15 @@
   }
   
   .TaskList-table th {
-    background-color: #4caf50;
+    background-color: #3f443f;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 13px;
+  }
+
+  .AddTask-btn:hover {
+    background-color: #45a049;
   }
 
   .Action-btn {
@@ -47,7 +72,7 @@
     padding: 3px 8px;  
     font-size: 12px;    
     height: 30px;     
-    min-width: 60px;        
+    min-width: 30px;        
     border-radius: 5px;     
     border: 1px solid #ccc; 
     box-sizing: border-box;

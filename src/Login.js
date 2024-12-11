@@ -44,6 +44,8 @@ const Login = () => {
       });
       
       setError(' ');
+
+      navigate('/list-page');
     }
   };
 
