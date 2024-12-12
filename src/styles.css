@@ -20,9 +20,10 @@ body {
   }
   
   h2 {
+    margin-left: 13px;
     text-align: center;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 5x;
+    margin-bottom: 20px;
     color: #333333;
   }
   
@@ -34,11 +35,12 @@ body {
   
   input {
     width: 100%;
-    padding: 6px;
     margin: 5px 0 8px;
+    padding: 5px;
     border: 1px solid #dddddd;
     border-radius: 4px;
     font-size: 12px;
+    margin-bottom: 15px;
   }
   
   input:focus {
@@ -115,6 +117,31 @@ body {
     padding-right: 15px;
   }
 
+
+  /*-------- Add Page Tasks -------*/
+
+  .addPage-container,
+  .editPage-container {
+
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .addPage-container .h2, 
+  .editPage-container .h2 {
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .addPage-container .input,
+  .editPage-container .input {
+    margin-bottom: 15px;
+    padding: 7px;
+  }
+
   .add-task-button-container,
   .edit-task-button-container {
     display: flex;
@@ -126,7 +153,19 @@ body {
   .EditPage-btn {
     padding: 10px 20px;
     cursor: pointer;
+    margin-left: 12px;
+    margin-right: 7px;
   }
+
+  .AddPage-Cancel-btn,
+  .EditPage-Cancel-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    background-color: #ff4d4f;
+    margin-bottom: 7px;
+  }
+
 
 
 

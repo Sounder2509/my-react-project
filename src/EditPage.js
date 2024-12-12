@@ -8,6 +8,8 @@ function EditTask() {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
+  const [error, setError] = useState({});
+
   useEffect(() => {
     if (state) {
       setName(state.name);
@@ -26,7 +28,7 @@ function EditTask() {
   };
 
   return (
-    <div>
+    <div className='editPage-container'>
       <h2>Edit Task</h2>
       <input
         type="text"
@@ -43,6 +45,7 @@ function EditTask() {
 
       <div className='edit-task-button-container'>
         <button className='EditPage-btn' onClick={handleEditTask}> Save Changes </button>
+        <button className='EditPage-Cancel-btn' onClick={handleEditTask}> Cancel </button>
       </div>
       
     </div>
